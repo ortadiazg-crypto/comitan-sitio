@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guía Turística de Comitán</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>COMITÁN DE DOMÍNGUEZ</h1>
+    <p>Guía de Puntos Turísticos y Culturales</p>
+    <div class="header-buscador">
+      <input type="search" id="buscador" placeholder="Buscar un lugar o calle…" autocomplete="off">
+      <div class="filtros" id="filtros"></div>
+    </div>
+  </header>
+
+  <main class="contenedor-categorias" id="app"></main>
+
+  <p class="sin-resultados" id="sinResultados" hidden>No se encontraron lugares con ese criterio.</p>
+
+  <section class="seccion-mapa">
+    <h2>Plano del centro histórico</h2>
+    <div class="mapa-wrap">
+      <img src="img/mapa-comitan.svg" alt="Mapa del centro histórico de Comitán de Domínguez">
+    </div>
+  </section>
+
+  <footer>
+    <p>Directorio construido a partir del mapa turístico oficial de Comitán de Domínguez.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

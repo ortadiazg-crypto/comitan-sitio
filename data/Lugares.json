@@ -1,0 +1,140 @@
+[
+  {
+    "id": 1,
+    "categoria": "Tienda y Módulo Turístico",
+    "color": "#6B2D82",
+    "lugares": [
+      {
+        "id": 101,
+        "nombre": "Tienda Turística",
+        "direccion": "Av. Central Sur Dr. B. Domínguez (A un costado de Presidencia Municipal)"
+      },
+      {
+        "id": 102,
+        "nombre": "Módulo Turístico",
+        "direccion": "Dentro del parque Central, contra esquina del Teatro Junchavín"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "categoria": "Arquitectura Religiosa",
+    "color": "#C2185B",
+    "lugares": [
+      {
+        "id": 201,
+        "nombre": "Templo de Santo Domingo y Parque Central Benito Juárez",
+        "direccion": "1a. Av. Oriente Sur, Centro"
+      },
+      {
+        "id": 202,
+        "nombre": "Templo de San José",
+        "direccion": "3a. Calle Sur Pte., Barrio de San José"
+      },
+      {
+        "id": 203,
+        "nombre": "Templo y Parque de Guadalupe",
+        "direccion": "1a. Calle Sur Poniente, Barrio de Guadalupe"
+      },
+      {
+        "id": 204,
+        "nombre": "Templo del Calvario",
+        "direccion": "1a. Calle Nte. Pte. No. 2, Barrio de El Calvario"
+      },
+      {
+        "id": 205,
+        "nombre": "Templo San Caralampio y Parque de La Pila",
+        "direccion": "3a. Av. Ote. Nte. No. 19, Barrio de La Pila"
+      },
+      {
+        "id": 206,
+        "nombre": "Templo de Jesusito",
+        "direccion": "2a. Av. Ote. Sur No. 23, Barrio de Jesusito"
+      },
+      {
+        "id": 207,
+        "nombre": "Templo de San Sebastián, Casa del Santo Niñito Jesús Fundador y Parque de La Corregidora",
+        "direccion": "1a. Avenida Ote. Sur No. 86, San Sebastián"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "categoria": "Centros Culturales y Museos",
+    "color": "#AD1457",
+    "lugares": [
+      {
+        "id": 301,
+        "nombre": "Mural Génesis e Historia de Los Hombres del Maíz",
+        "direccion": "Avenida Central Norte No. 1 Int. Presidencia Mpal."
+      },
+      {
+        "id": 302,
+        "nombre": "Teatro de la Ciudad Junchavín",
+        "direccion": "1a. Calle Sur Pte. 2, Centro"
+      },
+      {
+        "id": 303,
+        "nombre": "Casa Museo Belisario Domínguez",
+        "direccion": "Av. Central Sur Dr. B. Domínguez, Centro"
+      },
+      {
+        "id": 304,
+        "nombre": "Centro Cultural Rosario Castellanos",
+        "direccion": "1a. Calle Sur Poniente, Col. Centro"
+      },
+      {
+        "id": 305,
+        "nombre": "Archivo Histórico de Comitán",
+        "direccion": "Primera Calle Sur Ote., Centro"
+      },
+      {
+        "id": 306,
+        "nombre": "Museo Arqueológico de Comitán (INAH)",
+        "direccion": "Primera Calle Sur Ote., Centro"
+      },
+      {
+        "id": 307,
+        "nombre": "Oficinas de Correos de México",
+        "direccion": "Av. Central Sur No. 45, Dr. Belisario Domínguez 1a Sección"
+      },
+      {
+        "id": 308,
+        "nombre": "Museo de Arte Moderno Hermila Domínguez de Castellanos",
+        "direccion": "Av. Central Sur, Dr. Belisario Domínguez"
+      },
+      {
+        "id": 309,
+        "nombre": "Museo de la Ciudad",
+        "direccion": "4a. Sur Ote. No. 5, Barrio de San José"
+      },
+      {
+        "id": 310,
+        "nombre": "Museo Rosario Castellanos - MUROC",
+        "direccion": "3ra Calle Sur Oriente No. 12, Barrio de Jesusito"
+      },
+      {
+        "id": 311,
+        "nombre": "Auditorio Municipal Prof. Roberto Bonifaz Caballero",
+        "direccion": "Central Ote. No. 3, Centro"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "categoria": "Mercado y Artesanías",
+    "color": "#D81B60",
+    "lugares": [
+      {
+        "id": 401,
+        "nombre": "Mercado 1 de Mayo",
+        "direccion": "Central Ote. No. 14, Centro"
+      },
+      {
+        "id": 402,
+        "nombre": "Plaza de las Artesanías",
+        "direccion": "2a. Avenida Ote. Sur No. 35, Barrio de Jesusito"
+      }
+    ]
+  }
+]

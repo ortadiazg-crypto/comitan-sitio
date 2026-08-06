@@ -1,0 +1,293 @@
+/* =========================================================
+   RESET
+   ========================================================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --vino: #5c2040;
+  --vino-claro: #7a2c56;
+  --fondo: #f4ede2;
+  --papel: #ffffff;
+  --tarjeta: #faf6f0;
+  --texto: #333333;
+  --texto-suave: #6b6258;
+  --borde: rgba(92, 32, 64, 0.12);
+  --radio: 10px;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--fondo);
+  color: var(--texto);
+  line-height: 1.5;
+  padding: 24px 16px 60px;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+header {
+  text-align: center;
+  padding: 34px 20px 26px;
+  margin: 0 auto 36px;
+  max-width: 1000px;
+  background: linear-gradient(135deg, var(--vino), var(--vino-claro));
+  color: #ffffff;
+  border-radius: var(--radio);
+  box-shadow: 0 6px 18px rgba(92, 32, 64, 0.25);
+}
+
+header h1 {
+  font-size: clamp(1.6rem, 4vw, 2.3rem);
+  letter-spacing: 1.5px;
+  font-weight: 700;
+}
+
+header p {
+  font-size: 1.05rem;
+  opacity: 0.85;
+  margin-top: 6px;
+}
+
+.header-buscador {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+#buscador {
+  width: 100%;
+  max-width: 420px;
+  padding: 11px 16px;
+  border: none;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  color: var(--texto);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+#buscador:focus {
+  outline: 3px solid rgba(255, 255, 255, 0.5);
+}
+
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.chip {
+  font-size: 0.82rem;
+  font-family: inherit;
+  padding: 7px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 999px;
+  background: transparent;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, transform 0.1s ease;
+}
+
+.chip:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.chip.activo {
+  background: #ffffff;
+  color: var(--vino);
+  border-color: #ffffff;
+  font-weight: 600;
+}
+
+/* =========================================================
+   CONTENEDOR PRINCIPAL
+   ========================================================= */
+.contenedor-categorias {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* =========================================================
+   SECCIÓN POR CATEGORÍA
+   ========================================================= */
+.seccion-categoria {
+  background: var(--papel);
+  border-radius: var(--radio);
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.titulo-categoria {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ffffff;
+  padding: 14px 22px;
+  font-size: 1.15rem;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  font-weight: 700;
+}
+
+.titulo-icono {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.titulo-contador {
+  margin-left: auto;
+  font-size: 0.8rem;
+  font-weight: 400;
+  background: rgba(255, 255, 255, 0.25);
+  padding: 3px 10px;
+  border-radius: 999px;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+/* =========================================================
+   TARJETAS DE LUGARES
+   ========================================================= */
+.lista-lugares {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+  padding: 22px;
+}
+
+.tarjeta-lugar {
+  position: relative;
+  background-color: var(--tarjeta);
+  border: 1px solid var(--borde);
+  border-left: 4px solid #888;
+  border-radius: 6px;
+  padding: 14px 16px 16px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.tarjeta-lugar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta-id {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  font-size: 0.7rem;
+  color: var(--texto-suave);
+  opacity: 0.6;
+  font-family: 'Courier New', monospace;
+}
+
+.tarjeta-lugar h3 {
+  font-size: 1rem;
+  color: #2c3e50;
+  margin: 0 26px 8px 0;
+  line-height: 1.3;
+}
+
+.tarjeta-lugar p {
+  font-size: 0.88rem;
+  color: var(--texto-suave);
+  line-height: 1.4;
+}
+
+/* =========================================================
+   MAPA
+   ========================================================= */
+.seccion-mapa {
+  max-width: 1000px;
+  margin: 40px auto 0;
+}
+
+.seccion-mapa h2 {
+  font-size: 1.15rem;
+  color: var(--vino);
+  margin-bottom: 14px;
+}
+
+.mapa-wrap {
+  background: var(--papel);
+  border-radius: var(--radio);
+  padding: 18px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.mapa-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =========================================================
+   ESTADOS
+   ========================================================= */
+.sin-resultados {
+  max-width: 1000px;
+  margin: 30px auto 0;
+  text-align: center;
+  color: var(--texto-suave);
+  font-size: 0.95rem;
+}
+
+.aviso-error {
+  max-width: 640px;
+  margin: 0 auto;
+  background: var(--papel);
+  border: 1px solid var(--borde);
+  border-left: 4px solid var(--vino);
+  border-radius: var(--radio);
+  padding: 20px 24px;
+  text-align: left;
+}
+
+.aviso-error p {
+  margin-bottom: 10px;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.aviso-error code,
+.aviso-error pre {
+  background: var(--tarjeta);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.85rem;
+}
+
+.aviso-error pre {
+  display: block;
+  padding: 10px 14px;
+  margin: 8px 0;
+  overflow-x: auto;
+}
+
+footer {
+  max-width: 1000px;
+  margin: 50px auto 0;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--texto-suave);
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width: 480px) {
+  body { padding: 16px 10px 40px; }
+  header { padding: 26px 14px 20px; }
+  .lista-lugares { grid-template-columns: 1fr; padding: 16px; }
+}
