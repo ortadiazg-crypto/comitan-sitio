@@ -1,11 +1,10 @@
 // ---------------------------------------------------------
 // Carga de datos: pide el archivo por su ruta (data/Lugares.json).
-// Esto SOLO funciona si el sitio corre en un servidor
-// (Live Server, GitHub Pages, Netlify, etc.).
-// Si abres index.html con doble clic, el navegador bloquea
-// esa petición por seguridad (protocolo file://) y no hay
-// forma de evitarlo desde el código: es una restricción del
-// propio navegador. Ver el aviso más abajo si eso pasa.
+// Esto funciona porque el sitio corre servido por GitHub Pages
+// (o un servidor local tipo Live Server / XAMPP). Si algún día
+// abres index.html con doble clic desde tu computadora, el
+// navegador bloqueará esta petición por seguridad — muestra el
+// aviso de más abajo en ese caso.
 // ---------------------------------------------------------
 const RUTA_DATOS = 'data/Lugares.json';
 
@@ -23,6 +22,11 @@ const ICONOS = {
   'Transporte Público': '🚌'
 };
 
+// Se llena en mapa-interactivo.js con los ids que sí tienen
+// posición marcada en el mapa, para saber a quién mostrarle
+// el botón "Ver en el mapa". Ver window.lugaresEnMapa más abajo.
+window.lugaresEnMapa = window.lugaresEnMapa || new Set();
+
 function crearTarjeta(lugar, color) {
   const tarjeta = document.createElement('article');
   tarjeta.className = 'tarjeta-lugar';
@@ -32,6 +36,20 @@ function crearTarjeta(lugar, color) {
     <h3>${lugar.nombre}</h3>
     <p>📍 ${lugar.direccion}</p>
   `;
+
+  if (window.lugaresEnMapa.has(lugar.id)) {
+    const boton = document.createElement('button');
+    boton.type = 'button';
+    boton.className = 'boton-ver-mapa';
+    boton.textContent = '📌 Ver en el mapa';
+    boton.addEventListener('click', () => {
+      if (typeof window.mostrarLugarEnMapa === 'function') {
+        window.mostrarLugarEnMapa(lugar.id);
+      }
+    });
+    tarjeta.appendChild(boton);
+  }
+
   return tarjeta;
 }
 
@@ -94,10 +112,9 @@ function mostrarErrorCarga() {
       <p><strong>No se pudo cargar data/Lugares.json.</strong></p>
       <p>Esto pasa cuando abres <code>index.html</code> directo con doble clic:
       el navegador bloquea que un archivo local lea otro archivo local por seguridad.</p>
-      <p>Para que funcione con las rutas reales, corre un servidor local en la carpeta del proyecto. Por ejemplo:</p>
-      <pre>python -m http.server 8000</pre>
-      <p>y abre <code>http://localhost:8000</code> en tu navegador. También funciona subiendo la carpeta
-      a GitHub Pages, Netlify o Vercel.</p>
+      <p>Si esto lo ves en GitHub Pages, revisa que la carpeta se llame exactamente
+      <code>datos</code> (minúsculas) y el archivo <code>Lugares.json</code> con esa
+      capitalización exacta — GitHub Pages distingue mayúsculas de minúsculas.</p>
     </div>
   `;
 }
@@ -112,11 +129,19 @@ async function iniciar() {
     return;
   }
 
+  window.datosLugares = datos; // lo usa mapa-interactivo.js
+
   const contenedor = document.getElementById('app');
   const sinResultados = document.getElementById('sinResultados');
   const buscador = document.getElementById('buscador');
 
-  datos.forEach(grupo => contenedor.appendChild(crearSeccion(grupo)));
+  function pintarTarjetas() {
+    contenedor.innerHTML = '';
+    datos.forEach(grupo => contenedor.appendChild(crearSeccion(grupo)));
+  }
+
+  pintarTarjetas();
+  window.repintarTarjetas = pintarTarjetas; // para refrescar botones "Ver en el mapa"
 
   let categoriaActiva = 'todos';
 
