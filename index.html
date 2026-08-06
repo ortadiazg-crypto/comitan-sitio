@@ -22,9 +22,39 @@
   <p class="sin-resultados" id="sinResultados" hidden>No se encontraron lugares con ese criterio.</p>
 
   <section class="seccion-mapa">
-    <h2>Plano del centro histórico</h2>
-    <div class="mapa-wrap">
-      <img src="img/mapa-comitan.svg" alt="Mapa del centro histórico de Comitán de Domínguez">
+    <div class="mapa-encabezado">
+      <h2>Plano del centro histórico</h2>
+      <button id="btnModoEdicion" class="boton-editar" type="button" aria-pressed="false">
+        ✏️ Ubicar lugares en el mapa
+      </button>
+    </div>
+
+    <p id="avisoVacio" class="aviso-vacio" hidden>
+      Este mapa todavía no tiene lugares ubicados. Presiona <strong>«Ubicar lugares en el mapa»</strong> para empezar a marcarlos.
+    </p>
+
+    <p id="avisoEdicion" class="aviso-edicion" hidden>
+      <strong>Modo edición activo:</strong> da clic sobre el ícono de un lugar en el mapa,
+      elige a qué lugar corresponde y confirma. Cuando termines, presiona
+      «Descargar coordenadas» y guarda ese archivo como
+      <code>data/puntos-mapa.json</code> (reemplazando el que ya existe) para que quede fijo.
+      <button id="btnDescargarPuntos" type="button">⬇️ Descargar coordenadas</button>
+    </p>
+
+    <div class="mapa-wrap" id="mapaWrap">
+      <img id="imagenMapa" src="img/mapa-comitan.svg" alt="Mapa del centro histórico de Comitán de Domínguez">
+      <div id="capaMarcadores" class="capa-marcadores"></div>
+
+      <div id="popupLugar" class="popup-lugar" hidden></div>
+
+      <div id="formAsignar" class="form-asignar" hidden>
+        <label for="selectLugar">¿Qué lugar es este ícono?</label>
+        <select id="selectLugar"></select>
+        <div class="form-asignar-botones">
+          <button id="btnConfirmarAsignar" type="button">Guardar</button>
+          <button id="btnCancelarAsignar" type="button">Cancelar</button>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -33,5 +63,7 @@
   </footer>
 
   <script src="js/script.js"></script>
+  <script src="js/mapa-interactivo.js"></script>
+
 </body>
 </html>
