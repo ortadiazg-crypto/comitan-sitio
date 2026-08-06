@@ -34,8 +34,10 @@
     </p>
 
     <p id="avisoEdicion" class="aviso-edicion" hidden>
-      <strong>Modo edición activo:</strong> da clic sobre el ícono de un lugar en el mapa,
-      elige a qué lugar corresponde y confirma. Cuando termines, presiona
+      <strong>Modo edición activo:</strong> da clic sobre el ícono de un lugar en el mapa.
+      El sistema intenta adivinar de qué lugar se trata usando el color del ícono
+      (te lo va a mostrar arriba del selector); revisa que sea correcto y confirma.
+      Entre más lugares marques, más íconos reconocerá solo. Cuando termines, presiona
       «Descargar coordenadas» y guarda ese archivo como
       <code>data/puntos-mapa.json</code> (reemplazando el que ya existe) para que quede fijo.
       <button id="btnDescargarPuntos" type="button">⬇️ Descargar coordenadas</button>
@@ -49,6 +51,7 @@
 
       <div id="formAsignar" class="form-asignar" hidden>
         <label for="selectLugar">¿Qué lugar es este ícono?</label>
+        <p id="colorDetectado" class="color-detectado" hidden></p>
         <select id="selectLugar"></select>
         <div class="form-asignar-botones">
           <button id="btnConfirmarAsignar" type="button">Guardar</button>
