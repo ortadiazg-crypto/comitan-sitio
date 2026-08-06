@@ -204,32 +204,299 @@ header p {
   line-height: 1.4;
 }
 
+.boton-ver-mapa {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 10px;
+  font-family: inherit;
+  font-size: 0.76rem;
+  padding: 5px 11px;
+  border-radius: 999px;
+  border: 1px solid var(--vino);
+  background: transparent;
+  color: var(--vino);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.boton-ver-mapa:hover {
+  background: var(--vino);
+  color: #ffffff;
+}
+
 /* =========================================================
    MAPA
    ========================================================= */
 .seccion-mapa {
   max-width: 1000px;
   margin: 40px auto 0;
+  position: relative;
+}
+
+.mapa-encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 14px;
 }
 
 .seccion-mapa h2 {
   font-size: 1.15rem;
   color: var(--vino);
+}
+
+.boton-editar {
+  font-family: inherit;
+  font-size: 0.85rem;
+  padding: 8px 16px;
+  border: 1px solid var(--vino);
+  border-radius: 999px;
+  background: var(--papel);
+  color: var(--vino);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.boton-editar:hover {
+  background: var(--vino);
+  color: #ffffff;
+}
+
+.boton-editar[aria-pressed="true"] {
+  background: var(--vino);
+  color: #ffffff;
+}
+
+.aviso-vacio {
+  background: #f1e9f2;
+  border: 1px solid #d9c3dc;
+  border-radius: var(--radio);
+  padding: 10px 16px;
+  font-size: 0.85rem;
+  color: var(--vino);
   margin-bottom: 14px;
 }
 
+.aviso-edicion {
+  background: #fff8e6;
+  border: 1px solid #e8cf8a;
+  border-radius: var(--radio);
+  padding: 12px 16px;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+.aviso-edicion code {
+  background: rgba(0, 0, 0, 0.06);
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+}
+
+.aviso-edicion button {
+  display: block;
+  margin-top: 10px;
+  font-family: inherit;
+  font-size: 0.85rem;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background: var(--vino);
+  color: #ffffff;
+  cursor: pointer;
+}
+
 .mapa-wrap {
+  position: relative;
   background: var(--papel);
   border-radius: var(--radio);
   padding: 18px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
 }
 
+.mapa-wrap.modo-edicion {
+  cursor: crosshair;
+  outline: 2px dashed var(--vino);
+  outline-offset: -4px;
+}
+
 .mapa-wrap img {
   width: 100%;
   height: auto;
   display: block;
+  user-select: none;
 }
+
+.capa-marcadores {
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  top: 18px;
+  bottom: 18px;
+  pointer-events: none;
+}
+
+.marcador-mapa {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  background: var(--color-marcador, var(--vino));
+  box-shadow: 0 0 0 2px var(--color-marcador, var(--vino)), 0 2px 6px rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+  pointer-events: all;
+  padding: 0;
+}
+
+.marcador-mapa:hover,
+.marcador-mapa:focus-visible {
+  width: 22px;
+  height: 22px;
+}
+
+.marcador-mapa.marcador-resaltado {
+  width: 26px;
+  height: 26px;
+  box-shadow: 0 0 0 5px rgba(92, 32, 64, 0.35), 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.marcador-mapa::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  animation: pulso-marcador 2.2s ease-out infinite;
+  background: var(--color-marcador, var(--vino));
+  opacity: 0.5;
+}
+
+@keyframes pulso-marcador {
+  0% { transform: scale(1); opacity: 0.45; }
+  100% { transform: scale(2.4); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marcador-mapa::after { animation: none; display: none; }
+}
+
+/* --- ficha emergente al dar clic en un marcador --- */
+.popup-lugar {
+  position: absolute;
+  z-index: 30;
+  max-width: 240px;
+  background: var(--papel);
+  border-radius: 10px;
+  border: 1px solid var(--borde);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.22);
+  padding: 16px 18px 14px;
+}
+
+.popup-cerrar {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: var(--texto-suave);
+  line-height: 1;
+}
+
+.popup-categoria {
+  display: inline-block;
+  color: #fff;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  padding: 3px 9px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+}
+
+.popup-lugar h3 {
+  font-size: 0.98rem;
+  color: #2c3e50;
+  margin-bottom: 6px;
+  padding-right: 14px;
+}
+
+.popup-lugar p {
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+  line-height: 1.4;
+}
+
+.popup-id {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.7rem;
+  font-family: 'Courier New', monospace;
+  color: var(--texto-suave);
+  opacity: 0.6;
+}
+
+/* --- formulario para asignar un lugar a un punto del mapa --- */
+.form-asignar {
+  position: absolute;
+  z-index: 31;
+  width: 260px;
+  background: var(--papel);
+  border-radius: 10px;
+  border: 1px solid var(--vino);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.28);
+  padding: 14px 16px;
+}
+
+.form-asignar label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--vino);
+  margin-bottom: 8px;
+}
+
+.form-asignar select {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 0.82rem;
+  font-family: inherit;
+  border-radius: 6px;
+  border: 1px solid var(--borde);
+  margin-bottom: 10px;
+}
+
+.form-asignar-botones {
+  display: flex;
+  gap: 8px;
+}
+
+.form-asignar-botones button {
+  flex: 1;
+  font-family: inherit;
+  font-size: 0.82rem;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--vino);
+  cursor: pointer;
+}
+
+#btnConfirmarAsignar {
+  background: var(--vino);
+  color: #fff;
+}
+
+#btnCancelarAsignar {
+  background: transparent;
+  color: var(--vino);
+}
+
 
 /* =========================================================
    ESTADOS
