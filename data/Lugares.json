@@ -7,12 +7,14 @@
       {
         "id": 101,
         "nombre": "Tienda Turística",
-        "direccion": "Av. Central Sur Dr. B. Domínguez (A un costado de Presidencia Municipal)"
+        "direccion": "Av. Central Sur Dr. B. Domínguez (A un costado de Presidencia Municipal)",
+        "descripcion": "La Tienda Turística es un punto del directorio turístico ubicado a un costado de la Presidencia Municipal de Comitán. Su ubicación permite incluirla en un recorrido por el centro de la ciudad y los lugares cercanos al parque central."
       },
       {
         "id": 102,
         "nombre": "Módulo Turístico",
-        "direccion": "Dentro del parque Central, contra esquina del Teatro Junchavín"
+        "direccion": "Dentro del parque Central, contra esquina del Teatro Junchavín",
+        "descripcion": "El Módulo Turístico es un punto de orientación para quienes visitan Comitán. Se encuentra dentro del parque central y permite ubicar un lugar de consulta durante el recorrido. Puedes acercarte para preguntar por información turística y disponibilidad de atención."
       }
     ]
   },
@@ -24,37 +26,44 @@
       {
         "id": 201,
         "nombre": "Templo de Santo Domingo y Parque Central Benito Juárez",
-        "direccion": "1a. Av. Oriente Sur, Centro"
+        "direccion": "1a. Av. Oriente Sur, Centro",
+        "descripcion": "Este punto reúne el Templo de Santo Domingo y el Parque Central Benito Juárez. La visita permite combinar la observación de la arquitectura religiosa con un paseo por el espacio público del centro de Comitán. Es una referencia para continuar el recorrido por los lugares cercanos."
       },
       {
         "id": 202,
         "nombre": "Templo de San José",
-        "direccion": "3a. Calle Sur Pte., Barrio de San José"
+        "direccion": "3a. Calle Sur Pte., Barrio de San José",
+        "descripcion": "El Templo de San José forma parte del recorrido de arquitectura religiosa de Comitán. Se encuentra en el barrio del mismo nombre y ofrece un punto de visita para observar su fachada y conocer el entorno del barrio. Durante las celebraciones religiosas, respeta las actividades de la comunidad."
       },
       {
         "id": 203,
         "nombre": "Templo y Parque de Guadalupe",
-        "direccion": "1a. Calle Sur Poniente, Barrio de Guadalupe"
+        "direccion": "1a. Calle Sur Poniente, Barrio de Guadalupe",
+        "descripcion": "El Templo y el Parque de Guadalupe forman un conjunto de visita dentro del barrio de Guadalupe. Este punto permite recorrer el parque y observar el exterior del templo, combinando un espacio de convivencia con un lugar de carácter religioso."
       },
       {
         "id": 204,
         "nombre": "Templo del Calvario",
-        "direccion": "1a. Calle Nte. Pte. No. 2, Barrio de El Calvario"
+        "direccion": "1a. Calle Nte. Pte. No. 2, Barrio de El Calvario",
+        "descripcion": "El Templo del Calvario es uno de los lugares incluidos en la ruta de arquitectura religiosa de Comitán. Se localiza en el barrio de El Calvario y puede incorporarse a un paseo por sus calles. La visita invita a observar los detalles del edificio y su relación con el entorno."
       },
       {
         "id": 205,
         "nombre": "Templo San Caralampio y Parque de La Pila",
-        "direccion": "3a. Av. Ote. Nte. No. 19, Barrio de La Pila"
+        "direccion": "3a. Av. Ote. Nte. No. 19, Barrio de La Pila",
+        "descripcion": "Este punto corresponde al Templo de San Caralampio y al Parque de La Pila, en el barrio de La Pila. El recorrido combina un espacio religioso con un parque del barrio. Puedes observar el exterior del templo y recorrer sus alrededores respetando las actividades que se desarrollen."
       },
       {
         "id": 206,
         "nombre": "Templo de Jesusito",
-        "direccion": "2a. Av. Ote. Sur No. 23, Barrio de Jesusito"
+        "direccion": "2a. Av. Ote. Sur No. 23, Barrio de Jesusito",
+        "descripcion": "El Templo de Jesusito se encuentra en el barrio del mismo nombre. Forma parte de los puntos religiosos señalados en el mapa y permite ampliar el recorrido hacia esta zona de Comitán. Al visitarlo, observa su arquitectura y respeta los momentos de oración."
       },
       {
         "id": 207,
         "nombre": "Templo de San Sebastián, Casa del Santo Niñito Jesús Fundador y Parque de La Corregidora",
-        "direccion": "1a. Avenida Ote. Sur No. 86, San Sebastián"
+        "direccion": "1a. Avenida Ote. Sur No. 86, San Sebastián",
+        "descripcion": "Esta referencia del mapa agrupa el Templo de San Sebastián, la Casa del Santo Niñito Jesús Fundador y el Parque de La Corregidora. Permite organizar una visita por distintos espacios religiosos y de convivencia del barrio de San Sebastián. Consulta por separado las condiciones de acceso de cada recinto."
       }
     ]
   },
@@ -66,57 +75,68 @@
       {
         "id": 301,
         "nombre": "Mural Génesis e Historia de Los Hombres del Maíz",
-        "direccion": "Avenida Central Norte No. 1 Int. Presidencia Mpal."
+        "direccion": "Avenida Central Norte No. 1 Int. Presidencia Mpal.",
+        "descripcion": "El mural Génesis e Historia de Los Hombres del Maíz se encuentra señalado dentro de la Presidencia Municipal. Es una obra para observar con atención sus figuras, colores y composición. Su título invita a reflexionar sobre el maíz y su relación con la historia y la identidad cultural."
       },
       {
         "id": 302,
         "nombre": "Teatro de la Ciudad Junchavín",
-        "direccion": "1a. Calle Sur Pte. 2, Centro"
+        "direccion": "1a. Calle Sur Pte. 2, Centro",
+        "descripcion": "El Teatro de la Ciudad Junchavín es un recinto dedicado a las artes escénicas y a las actividades culturales. Su ubicación en el centro permite incluirlo en un recorrido por la ciudad. Consulta la cartelera para conocer las funciones, los horarios y las condiciones de entrada."
       },
       {
         "id": 303,
         "nombre": "Casa Museo Belisario Domínguez",
-        "direccion": "Av. Central Sur Dr. B. Domínguez, Centro"
+        "direccion": "Av. Central Sur Dr. B. Domínguez, Centro",
+        "descripcion": "La Casa Museo Belisario Domínguez es un espacio dedicado a la memoria de la persona que lleva su nombre. La visita propone un acercamiento a su vida y a su relación con Comitán mediante la información y las exposiciones del recinto. Consulta los horarios antes de organizar tu visita."
       },
       {
         "id": 304,
         "nombre": "Centro Cultural Rosario Castellanos",
-        "direccion": "1a. Calle Sur Poniente, Col. Centro"
+        "direccion": "1a. Calle Sur Poniente, Col. Centro",
+        "descripcion": "El Centro Cultural Rosario Castellanos es un punto del recorrido cultural del centro de Comitán. Puedes consultar su programación para conocer las exposiciones, talleres o actividades disponibles. Es una opción para incorporar una experiencia cultural a tu paseo por la ciudad."
       },
       {
         "id": 305,
         "nombre": "Archivo Histórico de Comitán",
-        "direccion": "Primera Calle Sur Ote., Centro"
+        "direccion": "Primera Calle Sur Ote., Centro",
+        "descripcion": "El Archivo Histórico de Comitán es un espacio relacionado con la conservación y consulta de la memoria documental de la ciudad. Es un punto de interés para quienes desean investigar el pasado local. Para consultar documentos, pregunta por los requisitos de acceso y las normas de manejo del material."
       },
       {
         "id": 306,
         "nombre": "Museo Arqueológico de Comitán (INAH)",
-        "direccion": "Primera Calle Sur Ote., Centro"
+        "direccion": "Primera Calle Sur Ote., Centro",
+        "descripcion": "El Museo Arqueológico de Comitán es una opción para acercarse al patrimonio arqueológico y al conocimiento del pasado de la región. Durante el recorrido, consulta las explicaciones de las piezas y exposiciones para comprender su contexto. Verifica los horarios y las condiciones de acceso antes de acudir."
       },
       {
         "id": 307,
         "nombre": "Oficinas de Correos de México",
-        "direccion": "Av. Central Sur No. 45, Dr. Belisario Domínguez 1a Sección"
+        "direccion": "Av. Central Sur No. 45, Dr. Belisario Domínguez 1a Sección",
+        "descripcion": "Las Oficinas de Correos de México aparecen como un punto de referencia dentro del directorio de Comitán. Se relacionan con los servicios de correspondencia y envíos postales. Si necesitas realizar un trámite, consulta directamente los servicios disponibles, sus requisitos y el horario de atención."
       },
       {
         "id": 308,
         "nombre": "Museo de Arte Moderno Hermila Domínguez de Castellanos",
-        "direccion": "Av. Central Sur, Dr. Belisario Domínguez"
+        "direccion": "Av. Central Sur, Dr. Belisario Domínguez",
+        "descripcion": "El Museo de Arte Moderno Hermila Domínguez de Castellanos es un espacio del recorrido artístico de Comitán. La visita invita a observar las obras y explorar sus formas, colores y propuestas visuales. Consulta las exposiciones disponibles y las indicaciones del museo para realizar el recorrido."
       },
       {
         "id": 309,
         "nombre": "Museo de la Ciudad",
-        "direccion": "4a. Sur Ote. No. 5, Barrio de San José"
+        "direccion": "4a. Sur Ote. No. 5, Barrio de San José",
+        "descripcion": "El Museo de la Ciudad es un punto de interés para acercarse a la historia y a la identidad de Comitán. Puedes incluirlo en un recorrido por el barrio de San José y consultar la información de sus exposiciones. Antes de acudir, verifica los horarios de visita."
       },
       {
         "id": 310,
         "nombre": "Museo Rosario Castellanos - MUROC",
-        "direccion": "3ra Calle Sur Oriente No. 12, Barrio de Jesusito"
+        "direccion": "3ra Calle Sur Oriente No. 12, Barrio de Jesusito",
+        "descripcion": "El Museo Rosario Castellanos, identificado en el directorio como MUROC, es un espacio dedicado a la figura de la escritora. La visita permite acercarse a los contenidos que el recinto presenta sobre su vida y su obra. Se encuentra señalado en el barrio de Jesusito."
       },
       {
         "id": 311,
         "nombre": "Auditorio Municipal Prof. Roberto Bonifaz Caballero",
-        "direccion": "Central Ote. No. 3, Centro"
+        "direccion": "Central Ote. No. 3, Centro",
+        "descripcion": "El Auditorio Municipal Prof. Roberto Bonifaz Caballero es un recinto para la realización de eventos y actividades colectivas. Su ubicación en el centro lo convierte en un punto de referencia del recorrido. Consulta la programación de cada evento para conocer horarios, acceso y disponibilidad."
       }
     ]
   },
@@ -128,12 +148,14 @@
       {
         "id": 401,
         "nombre": "Mercado 1 de Mayo",
-        "direccion": "Central Ote. No. 14, Centro"
+        "direccion": "Central Ote. No. 14, Centro",
+        "descripcion": "El Mercado 1 de Mayo es un punto del recorrido comercial de Comitán. Visitarlo permite acercarse a la actividad cotidiana del mercado y explorar los productos disponibles en sus puestos. Pregunta directamente a los comerciantes por precios y disponibilidad."
       },
       {
         "id": 402,
         "nombre": "Plaza de las Artesanías",
-        "direccion": "2a. Avenida Ote. Sur No. 35, Barrio de Jesusito"
+        "direccion": "2a. Avenida Ote. Sur No. 35, Barrio de Jesusito",
+        "descripcion": "La Plaza de las Artesanías es un punto de interés para explorar la oferta artesanal durante tu visita a Comitán. Puedes recorrer los espacios de venta y preguntar por los materiales, las técnicas y el origen de las piezas disponibles. Se encuentra señalada en el barrio de Jesusito."
       }
     ]
   }

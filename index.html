@@ -3,34 +3,92 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Guía Turística de Comitán</title>
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
 
+  <title>Guía Turística de Comitán</title>
+
+  <!-- Evita la solicitud del archivo favicon.ico -->
+  <link rel="icon" href="data:,">
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Mantiene oculto el aviso, aunque JavaScript cambie hidden -->
+  <style>
+    #avisoLugar {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
   <header>
     <h1>COMITÁN DE DOMÍNGUEZ</h1>
     <p>Guía de Puntos Turísticos y Culturales</p>
+
     <div class="header-buscador">
-      <input type="search" id="buscador" placeholder="Buscar un lugar o calle…" autocomplete="off">
+      <input
+        type="search"
+        id="buscador"
+        aria-label="Buscar un lugar o calle"
+        placeholder="Buscar un lugar o calle…"
+        autocomplete="off"
+      >
+
       <div class="filtros" id="filtros"></div>
     </div>
   </header>
 
   <main class="contenedor-categorias" id="app"></main>
 
-  <p class="sin-resultados" id="sinResultados" hidden>No se encontraron lugares con ese criterio.</p>
+  <p class="sin-resultados" id="sinResultados" hidden>
+    No se encontraron lugares con ese criterio.
+  </p>
 
-  <section class="seccion-mapa">
-    <h2>Plano del centro histórico</h2>
+  <section class="seccion-mapa" aria-labelledby="tituloMapa">
+    <h2 id="tituloMapa">Plano del centro histórico</h2>
+
+    <p>
+      Presiona un icono del mapa para consultar su descripción.
+    </p>
+
     <div class="mapa-wrap">
-      <img src="img/mapa-comitan.svg" alt="Mapa del centro histórico de Comitán de Domínguez">
+      <div id="mapaInteractivo">
+        Cargando mapa...
+      </div>
     </div>
   </section>
 
   <footer>
-    <p>Directorio construido a partir del mapa turístico oficial de Comitán de Domínguez.</p>
+    <p>
+      Directorio construido a partir del mapa turístico oficial
+      de Comitán de Domínguez.
+    </p>
   </footer>
+
+  <!-- Ventana con la información del lugar seleccionado -->
+  <dialog
+    id="ventanaLugar"
+    aria-labelledby="nombreLugar"
+    aria-describedby="descripcionLugar"
+  >
+    <button
+      id="cerrarVentana"
+      type="button"
+      aria-label="Cerrar descripción"
+    >
+      ×
+    </button>
+
+   <p id="idLugar"></p>
+
+    <h2 id="nombreLugar"></h2>
+
+    <p id="descripcionLugar"></p>
+
+    <p id="direccionLugar"></p>
+
+    <!-- Se conserva para que el JavaScript existente siga funcionando -->
+    <p id="avisoLugar" hidden></p>
+  </dialog>
 
   <script src="js/script.js"></script>
 </body>
