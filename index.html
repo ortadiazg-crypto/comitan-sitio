@@ -43,16 +43,42 @@
     No se encontraron lugares con ese criterio.
   </p>
 
-  <section class="seccion-mapa" aria-labelledby="tituloMapa">
-    <h2 id="tituloMapa">Plano del centro histórico</h2>
+  <section class="seccion-mapa">
+    <div class="mapa-encabezado">
+      <h2>Plano del centro histórico</h2>
+      <button id="btnModoEdicion" class="boton-editar" type="button" aria-pressed="false">
+        ✏️ Ubicar lugares en el mapa
+      </button>
+    </div>
 
-    <p>
-      Presiona un icono del mapa para consultar su descripción.
+    <p id="avisoVacio" class="aviso-vacio" hidden>
+      Este mapa todavía no tiene lugares ubicados. Presiona <strong>«Ubicar lugares en el mapa»</strong> para empezar a marcarlos.
     </p>
 
-    <div class="mapa-wrap">
-      <div id="mapaInteractivo">
-        Cargando mapa...
+    <p id="avisoEdicion" class="aviso-edicion" hidden>
+      <strong>Modo edición activo:</strong> da clic sobre el ícono de un lugar en el mapa.
+      El sistema intenta adivinar de qué lugar se trata usando el color del ícono
+      (te lo va a mostrar arriba del selector); revisa que sea correcto y confirma.
+      Entre más lugares marques, más íconos reconocerá solo. Cuando termines, presiona
+      «Descargar coordenadas» y guarda ese archivo como
+      <code>data/puntos-mapa.json</code> (reemplazando el que ya existe) para que quede fijo.
+      <button id="btnDescargarPuntos" type="button">⬇️ Descargar coordenadas</button>
+    </p>
+
+    <div class="mapa-wrap" id="mapaWrap">
+      <img id="imagenMapa" src="img/mapa-comitan.svg" alt="Mapa del centro histórico de Comitán de Domínguez">
+      <div id="capaMarcadores" class="capa-marcadores"></div>
+
+      <div id="popupLugar" class="popup-lugar" hidden></div>
+
+      <div id="formAsignar" class="form-asignar" hidden>
+        <label for="selectLugar">¿Qué lugar es este ícono?</label>
+        <p id="colorDetectado" class="color-detectado" hidden></p>
+        <select id="selectLugar"></select>
+        <div class="form-asignar-botones">
+          <button id="btnConfirmarAsignar" type="button">Guardar</button>
+          <button id="btnCancelarAsignar" type="button">Cancelar</button>
+        </div>
       </div>
     </div>
   </section>
@@ -78,7 +104,7 @@
       ×
     </button>
 
-   <p id="idLugar"></p>
+    <p id="idLugar"></p>
 
     <h2 id="nombreLugar"></h2>
 
@@ -91,5 +117,7 @@
   </dialog>
 
   <script src="js/script.js"></script>
+  <script src="js/mapa-interactivo.js"></script>
+
 </body>
 </html>
