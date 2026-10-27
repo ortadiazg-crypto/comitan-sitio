@@ -39,4 +39,5 @@ jobs:
         with:
           app-name: 'sitio-comitan-turismo'
           slot-name: 'Production'
+          publish-profile: ${{ secrets.AZUREWEBAPPS_PUBLISH_PROFILE }}
           package: .
